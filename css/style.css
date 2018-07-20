@@ -150,6 +150,7 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	z-index: 1;
 }
 
 #howto h2 {
