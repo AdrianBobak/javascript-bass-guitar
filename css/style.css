@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3 {
+	font-family: 'Merriweather', serif;
+	text-align: center;
+}
+
+h1 {
+	font-size: 4.5rem;
+	margin: 25px 0 0;
+}
+
+h2 {
+	font-size: 16px;
+	color: #000;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#heading-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#heading-container .heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 75%;
+}
+
+#heading-container .circle {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+	transition: 0.2s;
+}
+
+#heading-container .circle:hover {
+	transform: scale(1.2) rotate(10deg);
+	transition: 0.2s;
+}
+
+
+#guitar {
+	margin: 0;
+	margin-top: 30px;
+	padding: 0;
+	width: 100%;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	background: url(../images/guitar.jpg) no-repeat;
+	background-size: cover;
+	box-shadow: 0px 2px 36px 1px rgba(107,79,107,1);
+	border-top: 3px solid #b15e0a;
+	border-bottom: 3px solid #b15e0a;
+}
+
+#guitar>div {
+	width: 100%;
+	min-height: 30px;
+	flex-grow: 1;
+	display: flex;
+	justify-content: stretch;
+	border-bottom: 8px solid #d1d1cf;
+	box-shadow: 0px 1px 8px 1px rgba(107,79,107,1);
+	margin: 0;
+	padding: 0;
+	transition: 0.1s;
+}
+
+#guitar>div:last-child {
+	border-bottom: none;
+}
+
+#guitar>div>div {
+	border-right: 5px groove #bfb4a9;
+	flex-grow: 1;
+	margin: 0;
+	padding: 0;
+}
+
+#guitar>div>div:last-child {
+	border-right: none;
+}
+
+#guitar>div>div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#guitar>div>div>span {
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	display: flex;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.steady {
+	background-color: rgba(255,200,0,0.60);
+	transition: 0.1s;
+}
+
+.active {
+	background-color: rgba(255,0,0,0.6);
+	transition: 0.1s;
+}
+
+.empty {
+	border-bottom: 8px solid rgba(255,0,0,1) !important;
+	box-shadow: none !important;
+	transition: 0.1s;
+}
+
+
+#howto {
+	width: 60%;
+	height: 500px;
+	transform: translate(-50%) scale(1);
+	left: 50%;
+	top: 10%;
+	background: #fff;
+	position: absolute;
+	border-radius: 30px;
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#howto h2 {
+	font-size: 30px;
+}
+
+#howto .close {
+	position: absolute;
+	right: 25px;
+	top: 20px;
+	border: 1px solid #000;
+	padding: 5px 10px;
+	transition: 0.2s;
+}
+
+#howto .close:hover {
+	transition: 0.2s;
+	transform: scale(1.1);
+}
+
+#howto .close p {
+	margin: 0;
+	font-family: 'Merriweather', serif;
+	text-align: center;
+}
+
+#howto .howto-container {
+	display: flex;
+	width: 100%;
+}
+
+
+#howto .howto-container .images {
+	background-image: url(../images/keyboard-player.jpg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 50%;
+	height: 300px;
+}
+
+#howto .howto-container .content {
+	padding-right: 50px;
+	width: 50%;
+	height: 300px;
+}
+
+#header {
+	text-align: right;
+	padding-right: 10px;
+	font-size: 12px;
+}
+
+#header a {
+	color: #000;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+@media (max-width: 900px) {
+	#howto {
+		width: 90%;
+	}
+}
+
+
+@media (max-width: 700px) {
+	
+	h1 {
+		font-size: 3rem;
+	}
+	
+	#heading-container {
+		flex-wrap: wrap;
+	}
+	
+	#heading-container .heading {
+		width: 100%;
+		order: 1;
+	}
+	
+	#heading-container .circle:first-child {
+		margin-right: 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	#howto .images {
+		display: none;
+	}
+	
+	#howto .howto-container .content {
+		width: 100%;
+		padding-left: 50px;
+	}
+	
+	#howto .close {
+		position: initial;
+		width: 50px;
+		align-self: center;
+	}
+	
+	#guitar>div>div>span {
+		width: 10px;
+		height: 10px;
+	}
+}
