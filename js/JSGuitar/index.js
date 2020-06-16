@@ -127,7 +127,6 @@ class JSGuitar {
     };
 
     this.changeGuitar = () => {
-      console.log(this.currentGuitar);
       this.currentGuitar === 'bass'
         ? this.currentGuitar = 'guitar'
         : this.currentGuitar = 'bass';
