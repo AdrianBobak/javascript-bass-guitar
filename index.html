@@ -1,115 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>JS Bass Guitar</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Merriweather:700|Open+Sans&amp;subset=latin-ext" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-	<div id="header">
-		<p>Created by: <a href="https://www.linkedin.com/in/bobakadrian/" target="_blank">Adrian Bobak</a></p>
-	</div>
-	<div id="heading-container">
-		<div class="switch circle">
-			<h2>Switch a guitar!</h2>
-		</div>
-		<div class="heading">
-			<h1>JS Bass Guitar</h1>
-			<h2>Use your keyboard to play virtual guitar!</h2>
-		</div>
-		<div class="learn circle">
-			<h2>How to play</h2>
-		</div>
-	</div>
-	<div id="howto">
-		<div class="close">
-			<p>close</p>
-		</div>
-		<h2>How to play</h2>
-		<div class="howto-container">
-			<div class="images"></div>
-			<div class="content">
-				<p>The idea is to hold a keyboard upside down with hands, as a guitar. The frets are located on F-keys and the strings on Num-keys.</p>
-				<p>The keys and corresponding strings:<br> <strong>0: E, 1 or 2: A, 4 or 5: G, 7 or 8: D</strong></p>
-				<p><strong>There are 12 frets, from F1 to F12.</strong> When you click E-string, you play E-note (empty string). When you hold F1 and click E-string key, you play F-note.</p>
-				<h3>Let's rock!</h3>
-			</div>
-		</div>
-	</div>
-	<div id="guitar">
-		<div class="string0">
-			<div class="F1"></div>
-			<div class="F2"></div>
-			<div class="F3"></div>
-			<div class="F4"></div>
-			<div class="F5"></div>
-			<div class="F6"></div>
-			<div class="F7"></div>
-			<div class="F8"></div>
-			<div class="F9"></div>
-			<div class="F10"></div>
-			<div class="F11"></div>
-			<div class="F12"></div>
-		</div>
-		<div class="string0 string1 string2">
-			<div class="F1"></div>
-			<div class="F2"></div>
-			<div class="F3"></div>
-			<div class="F4"></div>
-			<div class="F5"></div>
-			<div class="F6"></div>
-			<div class="F7"></div>
-			<div class="F8"></div>
-			<div class="F9"></div>
-			<div class="F10"></div>
-			<div class="F11"></div>
-			<div class="F12"></div>
-		</div>
-		<div class="string1 string2 string4 string5">
-			<div class="F1"><span></span></div>
-			<div class="F2"></div>
-			<div class="F3"><span></span></div>
-			<div class="F4"></div>
-			<div class="F5"><span></span></div>
-			<div class="F6"></div>
-			<div class="F7"><span></span></div>
-			<div class="F8"></div>
-			<div class="F9"><span></span></div>
-			<div class="F10"></div>
-			<div class="F11"></div>
-			<div class="F12"><span></span></div>
-		</div>
-		<div class="string4 string5 string7 string8">
-			<div class="F1"></div>
-			<div class="F2"></div>
-			<div class="F3"></div>
-			<div class="F4"></div>
-			<div class="F5"></div>
-			<div class="F6"></div>
-			<div class="F7"></div>
-			<div class="F8"></div>
-			<div class="F9"></div>
-			<div class="F10"></div>
-			<div class="F11"></div>
-			<div class="F12"></div>
-		</div>
-		<div class="string7 string8">
-			<div class="F1"></div>
-			<div class="F2"></div>
-			<div class="F3"></div>
-			<div class="F4"></div>
-			<div class="F5"></div>
-			<div class="F6"></div>
-			<div class="F7"></div>
-			<div class="F8"></div>
-			<div class="F9"></div>
-			<div class="F10"></div>
-			<div class="F11"></div>
-			<div class="F12"></div>
-		</div>
-	</div>
-<script src="js/script.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS Bass Guitar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:700|Open+Sans&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="header">
+      <p>
+        Created by:
+        <a href="https://www.linkedin.com/in/bobakadrian/" target="_blank"
+          >Adrian Bobak</a
+        >
+      </p>
+    </div>
+    <div class="heading__container">
+      <button class="switch circle">Switch a guitar!</button>
+      <div class="heading">
+        <h1>JS Bass Guitar</h1>
+        <h2>Use your keyboard to play virtual guitar!</h2>
+      </div>
+      <button class="modal__open circle">How to play</button>
+    </div>
+    <div class="modal">
+      <button class="modal__close">close</button>
+      <h2>How to play</h2>
+      <div class="modal__content-container">
+        <div class="modal__image"></div>
+        <div class="modal__content">
+          <p>
+            The idea is to hold a keyboard upside down with hands, as a guitar.
+            The frets are located on F-keys and the strings on Num-keys.
+          </p>
+          <p>
+            The keys and corresponding strings:<br />
+            <strong>0: E, 1 or 2: A, 4 or 5: G, 7 or 8: D</strong>
+          </p>
+          <p>
+            <strong>There are 12 frets, from F1 to F12.</strong> When you click
+            E-string, you play E-note (empty string). When you hold F1 and click
+            E-string key, you play F-note.
+          </p>
+          <h3>Let's rock!</h3>
+        </div>
+      </div>
+    </div>
+    <div class="guitar">
+      <div class="guitar__row guitar--E guitar--empty-E">
+        <div class="guitar__fret F1"></div>
+        <div class="guitar__fret F2"></div>
+        <div class="guitar__fret F3"></div>
+        <div class="guitar__fret F4"></div>
+        <div class="guitar__fret F5"></div>
+        <div class="guitar__fret F6"></div>
+        <div class="guitar__fret F7"></div>
+        <div class="guitar__fret F8"></div>
+        <div class="guitar__fret F9"></div>
+        <div class="guitar__fret F10"></div>
+        <div class="guitar__fret F11"></div>
+        <div class="guitar__fret F12"></div>
+      </div>
+      <div class="guitar__row guitar--E guitar--A guitar--empty-A">
+        <div class="guitar__fret F1"></div>
+        <div class="guitar__fret F2"></div>
+        <div class="guitar__fret F3"></div>
+        <div class="guitar__fret F4"></div>
+        <div class="guitar__fret F5"></div>
+        <div class="guitar__fret F6"></div>
+        <div class="guitar__fret F7"></div>
+        <div class="guitar__fret F8"></div>
+        <div class="guitar__fret F9"></div>
+        <div class="guitar__fret F10"></div>
+        <div class="guitar__fret F11"></div>
+        <div class="guitar__fret F12"></div>
+      </div>
+      <div class="guitar__row guitar--A guitar--D guitar--empty-D">
+        <div class="guitar__fret F1"><span></span></div>
+        <div class="guitar__fret F2"></div>
+        <div class="guitar__fret F3"><span></span></div>
+        <div class="guitar__fret F4"></div>
+        <div class="guitar__fret F5"><span></span></div>
+        <div class="guitar__fret F6"></div>
+        <div class="guitar__fret F7"><span></span></div>
+        <div class="guitar__fret F8"></div>
+        <div class="guitar__fret F9"><span></span></div>
+        <div class="guitar__fret F10"></div>
+        <div class="guitar__fret F11"></div>
+        <div class="guitar__fret F12"><span></span></div>
+      </div>
+      <div class="guitar__row guitar--D guitar--G guitar--empty-G">
+        <div class="guitar__fret F1"></div>
+        <div class="guitar__fret F2"></div>
+        <div class="guitar__fret F3"></div>
+        <div class="guitar__fret F4"></div>
+        <div class="guitar__fret F5"></div>
+        <div class="guitar__fret F6"></div>
+        <div class="guitar__fret F7"></div>
+        <div class="guitar__fret F8"></div>
+        <div class="guitar__fret F9"></div>
+        <div class="guitar__fret F10"></div>
+        <div class="guitar__fret F11"></div>
+        <div class="guitar__fret F12"></div>
+      </div>
+      <div class="guitar__row guitar--G">
+        <div class="guitar__fret F1"></div>
+        <div class="guitar__fret F2"></div>
+        <div class="guitar__fret F3"></div>
+        <div class="guitar__fret F4"></div>
+        <div class="guitar__fret F5"></div>
+        <div class="guitar__fret F6"></div>
+        <div class="guitar__fret F7"></div>
+        <div class="guitar__fret F8"></div>
+        <div class="guitar__fret F9"></div>
+        <div class="guitar__fret F10"></div>
+        <div class="guitar__fret F11"></div>
+        <div class="guitar__fret F12"></div>
+      </div>
+    </div>
+    <script type="module" src="js/index.js"></script>
+  </body>
 </html>
